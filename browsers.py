@@ -1,4 +1,4 @@
-from random import randint as rint
+from random import choice
 
 chrome_ver = [
     '77.0', '77.0', '76.0.3809', '75.0.3770', '74.0.3729', '73.0.3683',
@@ -37,14 +37,14 @@ def firefox() -> str:
         '50.0.1', '50.0.2'
     ]
 
-    return main.replace('%VER%', ver[rint(0, len(ver) - 1)])
+    return main.replace('%VER%', choice(ver))
 
 
 def chrome() -> str:
     main = 'Mozilla/5.0 (%PLAT%) AppleWebKit/537.36 (KHTML,' + \
            ' like Gecko) Chrome/%VER% Safari/537.36'
 
-    return main.replace('%VER%', chrome_ver[rint(0, len(chrome_ver) - 1)])
+    return main.replace('%VER%', choice(chrome_ver))
 
 
 def opera() -> str:
@@ -64,13 +64,14 @@ def opera() -> str:
         '50.0.2762.58', '50.0.2762.67'
     ]
 
-    ua = rint(0, len(ver) - 1)
-    main = main.replace('%OVER%', ver[ua])
-    main = main.replace('%CVER%', chrome_ver[ua])
+    main = main.replace('%OVER%', choice(ver))
+    main = main.replace('%CVER%', choice(chrome_ver))
 
     return main
 
 
 def random_browser() -> str:
     os = [chrome, opera, firefox]
-    return os[rint(0, 2)]()
+    return choice(os)()
+
+# print(random_browser())

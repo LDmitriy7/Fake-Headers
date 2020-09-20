@@ -9,9 +9,8 @@ all_headers = {
     'Cache-Control': ['max-age=0', 'no-cache', 'no-store'],
     'Referer': ['https://google.com', 'https://yandex.ru'],
     'Pragma': ['no-cache'],
-    'DNT': [1],
-    'Upgrade-Insecure-Requests': [1],
-    'content-length': [2825, 456, 1678, 1307, 3091]
+    'DNT': ['1'],
+    'Upgrade-Insecure-Requests': ['1'],
 }
 
 

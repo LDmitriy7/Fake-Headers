@@ -1,6 +1,6 @@
 """Contains function for creating random headers, including user-agent"""
 from fake_useragent import UserAgent, FakeUserAgentError
-from headers import gen_headers
+from fake_headers.headers import gen_headers
 
 
 def make_headers(browser: str = 'random'):

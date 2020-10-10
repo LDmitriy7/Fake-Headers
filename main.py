@@ -13,3 +13,6 @@ def make_headers(browser: str = 'random'):
         browser = ua.random
 
     return gen_headers(browser)
+
+
+print(make_headers())

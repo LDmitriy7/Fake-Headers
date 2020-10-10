@@ -15,4 +15,5 @@ def make_headers(browser: str = 'random'):
     return gen_headers(browser)
 
 
-print(make_headers())
+if __name__ == '__main__':
+    print(make_headers())

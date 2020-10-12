@@ -12,7 +12,6 @@ all_headers = {
     'Pragma': ['no-cache'],
     'DNT': ['1'],
     'Upgrade-Insecure-Requests': ['1'],
-    'Content-Length': ['5', '3', '7', '10'],
     'Content-Type': ['text/ping'],
     'Sec-Fetch-Dest': ['document'],
     'Sec-Fetch-Mode': ['navigate'],
